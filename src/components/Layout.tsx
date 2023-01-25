@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-// import Header from '@components/header/Navbar';
+import Navbar from '@components/navbar/Navbar';
 
 type Props = {
     children: React.ReactNode;
@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children } : Props) => {
     return (
         <>
-            {/* <Header /> */}
+            <Navbar />
             {children}
         </>
     )

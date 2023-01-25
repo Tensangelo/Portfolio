@@ -1,0 +1,218 @@
+.containerWelcome {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 9rem 3rem;
+    opacity: 1;
+    transition: opacity 0.4s;
+
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(225deg, #ffffff 40%, rgba(0, 0, 0, 0) 30%);
+	background-size: 400% 200%;
+	animation: gradient 1.5s 3.6s forwards;
+
+    .AboutMeInfo {
+        line-height: 1.4;
+        padding-left: 5rem;
+        z-index: 2;
+        min-width: 69rem;
+
+        h1 {
+            font-size: 9.5rem;
+            opacity: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 69rem;
+            animation: type 1.5s steps(40,end) 1s forwards, blink .5s step-end infinite alternate;
+        }
+        h3 {
+            color: #08fdd8;
+            font-size: 5.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 51rem;
+            animation: type 1s steps(40,end) forwards, blink .5s step-end infinite alternate;
+        }
+        p {
+            opacity: 0;
+            font-size: 2.5rem;
+            color: #8d8d8d;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 44rem;
+            animation: shring-animation 2s steps(40,end) 2.2s forwards, blink .5s step-end infinite alternate;
+        }
+
+        .buttonAboutMe {
+            display: block;
+            position: relative;
+            bottom: 6rem;
+            width: max-content;
+            font-size: 1.4rem;
+            margin-top: 6rem;
+            background-color: transparent;
+            color: #08fdd8;
+            border: 1px solid #08fdd8;
+            padding: 2rem 5rem;
+            letter-spacing: 3px;
+            border-radius: .8rem;
+            opacity: 0;
+            transition: .3s ease-out all;
+            animation: appearance .5s steps(40,end) 4s forwards;
+            z-index: 2;
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: .8rem;
+                width: 0%;
+                transition: .3s ease-out all;
+            }
+
+            &:hover {
+                color: #001b24;
+
+                span {
+                    width: 100%;
+                    background-color: #08fdd8;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .resume {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 5rem;
+        right: 8rem;
+        z-index: 10;
+        opacity: 0;
+        animation: ToptoBottom .5s 3.8s forwards;
+
+        .btnResume {
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: #08fdd8;
+            margin: 0 auto;
+            padding: 1.2rem;
+            border: 1px solid #08fdd8;
+            border-radius: .8rem;
+            position: relative;
+            transition: .2s ease-out all;
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: .5rem;
+                width: 0%;
+                transition: .3s ease-out all;
+            }
+
+            &:hover {
+                background-color: transparent;
+                border-color: #001b24;
+                color: #08fdd8;
+
+                span {
+                    width: 100%;
+                    background-color: #001b24;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 10%;
+	}
+    50% {
+        background-position: 52% 10%;
+    }
+	100% {
+		background-position: 50% 10%;
+	}
+}
+
+
+@keyframes shring-animation {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+        width: 0;
+    }
+    1% {
+        background-position: 0 0;
+        opacity: 1;
+        border-right: 5px solid #08fdd8;
+    }
+    50% {
+        background-position: 150px 0;
+        opacity: 1;
+        border-right: 5px solid #08fdd8;
+    }
+    100% {
+        background-position: 400px 0;
+        opacity: 1;
+        border-right: 5px solid #08fdd8;
+    }
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    1%, 99% {
+        opacity: 1;
+        border-right: 2.5px solid #08fdd8;
+    }
+    100%{
+        opacity: 1;
+        border-right: none;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+        bottom: 6rem;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes ToptoBottom {
+    from {
+        opacity: 0;
+        top: -5rem;
+    }
+    to {
+        opacity: 1;
+        top: 5rem;
+    }
+}
+
