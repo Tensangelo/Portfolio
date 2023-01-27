@@ -1,7 +1,7 @@
 const AnimationSnow = () => {
     return (
         <>
-            {[...Array(75)].map((x, i) => {
+            {[...Array(60)].map((x, i) => {
                 return (
                     <div key={i} className='snowflake'></div>
                 )

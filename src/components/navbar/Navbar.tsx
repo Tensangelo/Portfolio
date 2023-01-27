@@ -26,16 +26,16 @@ const Navbar = () => {
                 </Link>
             </div>
             <nav>
-                <Link rel='home' href={aboutMe}>
+                <Link rel='aboutMe' href={aboutMe}>
                     Acerca de mí
                 </Link>
-                <Link rel='home' href={developments}>
+                <Link rel='developments' href={developments}>
                     Desarrollos
                 </Link>
-                <Link rel='home' href={contact}>
+                <Link rel='contact' href={contact}>
                     Contacto
                 </Link>
-                <Link rel='home' href={extras}>
+                <Link rel='extras' href={extras}>
                     Extras
                 </Link>
             </nav>

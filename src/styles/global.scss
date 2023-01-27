@@ -37,19 +37,19 @@ a {
     top: -5vh;
 }
 
-@for $i from 1 through 50 {
+@for $i from 1 through 35 {
     .snowflake:nth-child(#{$i}) {
         --size: #{random(2) * 0.2}vw;
         --left-ini: #{random(20) - 10}vw;
         --left-end: #{random(20) - 10}vw;
-        background: #ffffff;
+        background: #08fdd8;
         left: #{random(100)}vw;
         animation: snowfall #{5 + random(10)}s linear infinite;
         animation-delay: #{random(10) + 3}s;
     }
 }
 
-@for $i from 51 through 75 {
+@for $i from 36 through 60 {
     .snowflake:nth-child(#{$i}) {
         --size: #{random(2) * 0.2}vw;
         --left-ini: #{random(20) - 10}vw;

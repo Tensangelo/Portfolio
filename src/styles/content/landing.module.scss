@@ -102,37 +102,19 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             letter-spacing: 2px;
+            background-color: #001b24;
             color: #08fdd8;
             margin: 0 auto;
             padding: 1.2rem;
-            border: 1px solid #08fdd8;
+            border: 1px solid #001b24;
             border-radius: .8rem;
             position: relative;
             transition: .2s ease-out all;
 
-            span {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                border-radius: .5rem;
-                width: 0%;
-                transition: .3s ease-out all;
-            }
-
             &:hover {
-                background-color: transparent;
-                border-color: #001b24;
-                color: #08fdd8;
-
-                span {
-                    width: 100%;
-                    background-color: #001b24;
-                    z-index: -1;
-                }
+                scale: 1.05;
             }
         }
     }
