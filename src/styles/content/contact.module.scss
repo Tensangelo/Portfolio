@@ -12,21 +12,22 @@
             margin-bottom: 2rem;
 
             h1 {
+                opacity: 0;
                 color: #08fdd8;
                 font-size: 5.2rem;
-                // opacity: 0;
                 white-space: nowrap;
                 overflow: hidden;
                 width: 48rem;
                 animation: shring-animation .8s steps(40,end) .1s forwards, blink .5s step-end infinite alternate;
             }
             p {
-                // opacity: 0;
+                opacity: 0;
                 font-size: 1.8rem;
                 text-align: justify;
                 max-width: 75rem;
                 line-height: 1.8;
                 margin-top: 2rem;
+                animation: MoveYAnimated .8s  1s forwards;
             }
         }
 
@@ -78,6 +79,7 @@
                     color: #ffffff;
                     border: none;
                     border-radius: .2rem;
+                    opacity: 0;
 
                     &::placeholder {
                         color: #ffffff;
@@ -113,6 +115,16 @@
                 input:disabled, textarea:disabled {
                     background-color: #111822;
                 }
+
+                input:nth-child(1) {
+                    animation: MoveYAnimated .8s 1.1s forwards;
+                }
+                input:nth-child(2) {
+                    animation: MoveYAnimated .8s 1.1s forwards;
+                }
+                textarea {
+                    animation: MoveYAnimated .8s 1.3s forwards;
+                }
             }
 
             .containerBtnSubmit {
@@ -131,6 +143,8 @@
                     width: 10rem;
                     height: 4rem;
                     transition: all .3s ease-in-out;
+                    opacity: 0;
+                    animation: MoveYAnimated .8s 1.4s forwards;
 
                     &::before {
                         content: '';
@@ -191,6 +205,9 @@
     }
 
     .infoSocial {
+        margin-top: 1rem;
+        opacity: 0;
+        animation: MoveYAnimated .8s 1.4s forwards;
 
         article {
 
@@ -353,6 +370,17 @@
                 }
             }
         }
+    }
+}
+
+@keyframes MoveYAnimated {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
     }
 }
 
