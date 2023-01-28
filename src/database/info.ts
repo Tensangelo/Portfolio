@@ -8,6 +8,7 @@ const Urls = {
     contactRed: {
         linkedin: 'https://www.linkedin.com/in/angelo-gaona/',
         github: 'https://github.com/Tensangelo',
+        codePen: 'https://codepen.io/Tensangelo',
         correo: '/',
         resume: '/',
     }
