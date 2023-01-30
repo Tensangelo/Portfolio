@@ -1,4 +1,4 @@
-import Styles from '@styles/animations/NeonSign.module.scss'
+import Styles from '@styles/animations/neonSign.module.scss'
 
 const NeonSign = () => {
     return (
