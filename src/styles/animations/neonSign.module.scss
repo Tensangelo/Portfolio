@@ -1,0 +1,174 @@
+.nextTime {
+    max-width: 80rem;
+    height: 20rem;
+    margin: 0 auto;
+    opacity: 0;
+    margin-top: 2rem;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+        linear-gradient(155deg, black 23px, transparent 23px),
+        linear-gradient(335deg, black 23px, transparent 23px),
+        linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    animation: appearance 1s 1.8s forwards;
+
+    .sign {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 2px;
+        left: 50%;
+        top: 50%;
+        text-transform: uppercase;
+        font-size: 6em;
+        animation: shine 2s forwards, flicker 3s infinite;
+
+        .fastFlicker {
+            animation: shine 2s forwards, blink 10s 1s infinite;
+        }
+        .flicker {
+            animation: shine 2s forwards, blink 3s 2s infinite;
+        }
+    }
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shine {
+    0% {
+        color: #ffffff;
+        text-shadow: none;
+    }
+    100% {
+        color: #ffffff;
+        text-shadow:
+            0 0 0.6rem #78b3d6, 0 0 1.5rem #08fdd8,
+            -0.2rem 0.1rem 1rem #08fdd8, 0.2rem 0.1rem 1rem #08fdd8,
+            0 -0.5rem 2rem #08fdd8, 0 0.5rem 3rem #08fdd8;
+    }
+}
+
+@keyframes blink {
+    0%, 22%, 36%, 75% {
+        color: #ffffff;
+        text-shadow:
+            0 0 0.6rem #78b3d6, 0 0 1.5rem #4bc6b6,
+            -0.2rem 0.1rem 1rem #4bc6b6, 0.2rem 0.1rem 1rem #4bc6b6,
+            0 -0.5rem 2rem #4bc6b6, 0 0.5rem 3rem #4bc6b6;
+    }
+    28%, 33% {
+        color: #4bc6b6;
+        text-shadow: none;
+    }
+    82%, 97% {
+        color: #4bc6b6;
+        text-shadow: none;
+    }
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+    4% {
+        opacity: 0.9;
+    }
+    6% {
+        opacity: 0.85;
+    }
+    8% {
+        opacity: 0.95;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    11% {
+        opacity: 0.922;
+    }
+    12% {
+        opacity: 0.9;
+    }
+    14% {
+        opacity: 0.95;
+    }
+    16% {
+        opacity: 0.98;
+    }
+    17% {
+        opacity: 0.9;
+    }
+    19% {
+        opacity: 0.93;
+    }
+    20% {
+        opacity: 0.99;
+    }
+    24% {
+        opacity: 1;
+    }
+    26% {
+        opacity: 0.94;
+    }
+    28% {
+        opacity: 0.98;
+    }
+    37% {
+        opacity: 0.93;
+    }
+    38% {
+        opacity: 0.5;
+    }
+    39% {
+        opacity: 0.96;
+    }
+    42% {
+        opacity: 1;
+    }
+    44% {
+        opacity: 0.97;
+    }
+    46% {
+        opacity: 0.94;
+    }
+    56% {
+        opacity: 0.9;
+    }
+    58% {
+        opacity: 0.9;
+    }
+    60% {
+        opacity: 0.99;
+    }
+    68% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.9;
+    }
+    72% {
+        opacity: 0.95;
+    }
+    93% {
+        opacity: 0.93;
+    }
+    95% {
+        opacity: 0.95;
+    }
+    97% {
+        opacity: 0.93;
+    }
+    to {
+        opacity: 1;
+    }
+}

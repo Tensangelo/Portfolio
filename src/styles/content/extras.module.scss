@@ -1,0 +1,189 @@
+.containerExtras {
+    padding: 9rem 3rem;
+
+    .descriptionExtras {
+        padding: 2rem;
+        margin: 0 auto;
+        max-width: 80rem;
+
+        h1 {
+            opacity: 0;
+            color: #08fdd8;
+            font-size: 5.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 18rem;
+            animation: shring-animation .5s steps(40,end) forwards, blink .5s step-end infinite alternate;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: #ffffff;
+            opacity: 0;
+            width: 100%;
+            text-align: justify;
+            margin-top: 2rem;
+            animation: appearance .8s .6s forwards;
+            line-height: 1.8;
+        }
+
+        .buttonContact {
+            display: block;
+            position: relative;
+            width: max-content;
+            font-size: 1.4rem;
+            margin-top: 4rem;
+            background-color: transparent;
+            color: #08fdd8;
+            border: 1px solid #08fdd8;
+            padding: 2rem 4rem;
+            letter-spacing: 3px;
+            opacity: 0;
+            transition: .3s ease-out all;
+            animation: appearance .8s .7s forwards;
+            z-index: 2;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 10%;
+                background-color: #000000;
+                height: .3rem;
+                right: 20%;
+                top: -0.21rem;
+                transform: skewX(-45deg);
+                transition: all .3s cubic-bezier(.86, 0, 0.07, 1);
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 10%;
+                background: #000000;
+                height: .3rem;
+                left: 20%;
+                bottom: -0.25rem;
+                transform: skewX(45deg);
+                transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+            }
+
+            &:hover {
+                background-color: #08fdd8;
+                color: #001b24;
+
+                &::before {
+                    right: 80%;
+                }
+                &::after {
+                    left: 80%;
+                }
+            }
+        }
+    }
+
+    .animated {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 2rem;
+
+        h2 {
+            margin-top: 8rem;
+            opacity: 0;
+            color: #08fdd8;
+            font-size: 3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 42rem;
+            animation: type 1s steps(40,end) 1s forwards, blink .5s step-end infinite alternate;
+        }
+    }
+
+    .bar {
+        background: #d0f0dd;
+        box-shadow: 0 0 0 #08fdd8,
+                    0 0 4px #08fdd8,
+                    0 0 8px #08fdd8,
+                    0 0 16px;
+        border-radius: 4px;
+        position: absolute;
+    }
+    .barLeft {
+        width: 4px;
+        animation: barLeft 5s linear infinite;
+        animation-delay: 1s;
+        animation-direction: reverse;
+    };
+    .barTop {
+        height: 4px;
+        animation: barTop 5s linear infinite;
+        animation-delay: 1s;
+        animation-direction: reverse;
+    }
+    .barRight {
+        width: 4px;
+        animation: barRight 5s linear infinite;
+        animation-delay: 3s;
+        animation-direction: reverse;
+    }
+    .barBottom {
+        height: 4px;
+        animation: barBottom 5s linear infinite;
+        animation-delay: 3s;
+        animation-direction: reverse;
+    }
+}
+
+@keyframes shring-animation {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+        width: 0;
+    }
+    1% {
+        background-position: 0 0;
+        opacity: 1;
+        border-right: 5px solid #08fdd8;
+    }
+    50% {
+        background-position: 150px 0;
+        opacity: 1;
+        border-right: 5px solid #08fdd8;
+    }
+    100% {
+        background-position: 400px 0;
+        opacity: 1;
+        border-right: 5px solid #08fdd8;
+    }
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    1%, 99% {
+        opacity: 1;
+        border-right: 2.5px solid #08fdd8;
+    }
+    100%{
+        opacity: 1;
+        border-right: none;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
