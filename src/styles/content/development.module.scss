@@ -130,6 +130,23 @@
             }
         }
 
+        .iconsRepositories {
+
+            li {
+                margin: 0 1rem;
+
+                &:hover {
+
+                    svg {
+
+                        path {
+                            fill: #08fdd8 !important;
+                        }
+                    }
+                }
+            }
+        }
+
         &:nth-of-type(2n) {
             justify-content: flex-start;
             animation-delay: 1.8s;

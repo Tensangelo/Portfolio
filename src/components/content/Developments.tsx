@@ -1,11 +1,21 @@
+import Link from 'next/link';
 import Styles from '@styles/content/development.module.scss';
 import Image from 'next/image';
+
+import Icon from '@mdi/react';
+import { mdiGithub, mdiOpenInNew  } from '@mdi/js';
 // Images
 import veranoPage from '@images/works/verano.png'
 import timeTracker from '@images/works/timeTracker.jpg'
 import MangmentUser from '@images/works/managmentUser.png'
+// Utils
+import Info from '@database/info';
 
 const Developments = () => {
+
+    const { repositories } = Info;
+    const { managmentUser } = repositories;
+    const { gitHub, page } = managmentUser
 
     return (
         <section className={Styles.contianerDevs}>
@@ -105,6 +115,28 @@ const Developments = () => {
                         <li>API services</li>
                         <li>Sass</li>
                         <li>Material Ui</li>
+                    </ul>
+                    <ul className={Styles.iconsRepositories}>
+                        <li>
+                            <Link href={gitHub} rel='MyGithub' target='_blank'>
+                                <Icon
+                                    title={'Icon github'}
+                                    path={mdiGithub}
+                                    size={'3rem'}
+                                    color='#8b969b'
+                                />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={page} rel='MyGithub' target='_blank'>
+                                <Icon
+                                    title={'Icon opne in new'}
+                                    path={mdiOpenInNew}
+                                    size={'3rem'}
+                                    color='#8b969b'
+                                />
+                            </Link>
+                        </li>
                     </ul>
                 </article>
                 <div className={`${Styles.bar} ${Styles.barLeft}`}></div>

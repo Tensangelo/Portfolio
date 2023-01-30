@@ -13,6 +13,12 @@ const Urls = {
         codePen: 'https://codepen.io/Tensangelo',
         correo: '/',
         resume: cv,
+    },
+    repositories: {
+        managmentUser: {
+            gitHub: 'https://github.com/Tensangelo/ManagementUser',
+            page: 'https://management-user-neon.vercel.app/',
+        }
     }
 }
 
