@@ -1,3 +1,5 @@
+import cv from '../../documents/cv.pdf';
+
 const Urls = {
     pages: {
         aboutMe: '/AboutMe',
@@ -10,7 +12,7 @@ const Urls = {
         github: 'https://github.com/Tensangelo',
         codePen: 'https://codepen.io/Tensangelo',
         correo: '/',
-        resume: '/',
+        resume: cv,
     }
 }
 

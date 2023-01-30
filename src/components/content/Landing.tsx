@@ -24,7 +24,7 @@ const Landing = () => {
                 </Link>
             </article>
             <div className={Styles.resume}>
-                <Link className={Styles.btnResume} href={resume} rel='Resume'>
+                <Link className={Styles.btnResume} href={resume} rel='Resume' target={'_blank'}>
                     <p>Resume</p>
                 </Link>
             </div>
