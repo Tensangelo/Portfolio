@@ -1,0 +1,69 @@
+@media (max-width: 1440px) {
+    .containerAboutMe {
+        padding: 9rem 5rem;
+        height: 100%;
+
+        .AboutTechnologies {
+            margin: 5rem 0 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 79rem;
+            max-width: 79rem;
+
+            ul {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .containerAboutMe {
+        padding: 7rem 3rem;
+
+        .AboutTechnologies {
+            margin: 0;
+
+            h2 {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .containerAboutMe {
+        padding: 5rem 1rem;
+
+        .AboutMeInfo {
+
+            h1 {
+                font-size: 7vw;
+                width: 58vw;
+            }
+            p {
+                font-size: 2.5vw;
+            }
+        }
+
+        .AboutTechnologies {
+            margin: 0;
+
+            h2 {
+                font-size: 2.5vw;
+                margin-top: 0;
+            }
+
+            ul {
+                font-size: 2.5vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .containerAboutMe {
+        padding: 7rem 1rem 0;
+    }
+}
