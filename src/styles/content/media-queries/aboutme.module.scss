@@ -66,8 +66,16 @@
     .containerAboutMe {
         padding: 7rem 0 0;
 
+        .AboutMeInfo {
+            width: 95%;
+
+            p {
+                margin-top: 2.5rem;
+            }
+        }
+
         .AboutTechnologies {
-            margin: 0;
+            width: 95%;
 
             ul {
                 margin-top: 2rem;
