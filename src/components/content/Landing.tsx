@@ -1,10 +1,11 @@
 
-import Styles from '@styles/content/landing.module.scss'
 import Link from 'next/link';
 // Components
 import AnimationSnow from '@components/effectAnimatios/Snow';
 // Utils
 import Info from '@database/info';
+// Styles
+import Styles from '@styles/content/landing.module.scss'
 
 const Landing = () => {
     const { pages, contactRed } = Info;
@@ -23,12 +24,7 @@ const Landing = () => {
                     <span></span>
                 </Link>
             </article>
-            <div className={Styles.resume}>
-                <Link className={Styles.btnResume} href={resume} rel='Resume' target={'_blank'}>
-                    <p>Resume</p>
-                </Link>
-            </div>
-            <AnimationSnow />
+            {/* <AnimationSnow /> */}
         </section>
     )
 }

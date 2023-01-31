@@ -10,7 +10,7 @@
     overflow: hidden;
     background: linear-gradient(225deg, #ffffff 40%, rgba(0, 0, 0, 0) 30%);
 	background-size: 400% 200%;
-	animation: gradient 1.5s 3.6s forwards;
+	animation: gradient 1.5s 3.4s forwards;
 
     .AboutMeInfo {
         line-height: 1.4;
@@ -41,7 +41,7 @@
             white-space: nowrap;
             overflow: hidden;
             width: 44rem;
-            animation: shring-animation 2s steps(40,end) 2.2s forwards, blink .5s step-end infinite alternate;
+            animation: shring-animation 1.2s steps(40,end) 2.2s forwards, blink .5s step-end infinite alternate;
         }
 
         .buttonAboutMe {
@@ -55,10 +55,10 @@
             color: #08fdd8;
             border: 1px solid #08fdd8;
             padding: 2rem 5rem;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             opacity: 0;
             transition: .3s ease-out all;
-            animation: appearance .5s steps(40,end) 4s forwards;
+            animation: appearance .5s steps(40,end) 3.4s forwards;
             z-index: 2;
 
             &::before {
@@ -96,60 +96,6 @@
                 &::after {
                     left: 80%;
                 }
-            }
-        }
-    }
-
-    .resume {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 5rem;
-        right: 8rem;
-        z-index: 10;
-        opacity: 0;
-        animation: ToptoBottom .5s 3.8s forwards;
-
-        .btnResume {
-            width: max-content;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            background-color: #a8b0b3;
-            color: #ffffff;
-            margin: 0 auto;
-            padding: 1.2rem;
-            // border: 1px solid #08fdd8;
-            position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: -1px;
-                left: 50%;
-                display: block;
-                width: 0;
-                height: 0;
-                transition: .3s;
-            }
-
-            &:hover {
-                color: #ffffff;
-
-                &::after {
-                    width: calc(100% + 2px);
-                    height: calc(100% + 2px);
-                    margin-left: calc(-50% - 1px);
-                    background-color: #08fdd8;
-                }
-            }
-
-            p {
-                z-index: 1;
             }
         }
     }
@@ -222,14 +168,5 @@
     }
 }
 
-@keyframes ToptoBottom {
-    from {
-        opacity: 0;
-        top: -5rem;
-    }
-    to {
-        opacity: 1;
-        top: 5rem;
-    }
-}
-
+// Media queris
+@import './media-queries/landing.module.scss';

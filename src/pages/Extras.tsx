@@ -15,6 +15,11 @@ const Extras = () => {
                         color: #08fdd8;
                         border-bottom: 1px solid #08fdd8;
                     }
+                    @media (min-width: 1025px) {
+                        #btnResume {
+                            display: none;
+                        }
+                    }
                 `}
             </style>
         </>

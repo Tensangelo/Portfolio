@@ -20,6 +20,10 @@ body {
     display: block;
     min-width: 320px;
     padding-left: 13rem;
+
+    @media (max-width: 1024px) {
+        padding-left: 0;
+    }
 }
 
 a {

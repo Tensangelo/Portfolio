@@ -16,7 +16,7 @@ const Extras = () => {
                     Extras
                 </h1>
                 <p>
-                    Esto es solo un pequeño vistazo de mi recorrido como desarrollador. Este portafolio sé irá actualizando anualmente con el propósito de reflejar el camino que estaré recorriendo. Si estás interesado no dudes en contactarme.
+                    Esto es solo un pequeño vistazo de mi recorrido como desarrollador. Este portafolio se irá actualizando anualmente con el propósito de reflejar el camino que estaré recorriendo. Si estás interesado no dudes en contactarme.
                 </p>
                 <Link className={Styles.buttonContact} rel='aboutMe' href={contact}>
                     Hagamos algo grandioso.
