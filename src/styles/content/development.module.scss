@@ -103,7 +103,7 @@
             .titleinfoDev {
                 font-size: 2.8rem;
                 text-align: end;
-                color: #4dc5b6;
+                color: #08fdd8;
             }
 
             .infoDev {
@@ -122,9 +122,11 @@
             list-style: none;
             display: flex;
             justify-content: flex-end;
+            flex-wrap: wrap;
+            margin-top: 2rem;
 
             li {
-                margin: 2rem 1rem;
+                margin: 5px 1rem;
                 font-size: 1.4rem;
                 color: #8b969b;
             }
@@ -360,3 +362,5 @@
         left: 0%;
     }
 }
+
+@import './media-queries/development.module.scss';

@@ -1,0 +1,197 @@
+@media (max-width: 1440px) {
+    .contianerDevs {
+
+        .contentTitle {
+            padding-left: 1rem;
+
+            h1 {
+                font-size: 4vw;
+                width: 73vw;
+            }
+        }
+
+        .containerWorks, .containerWorks:nth-of-type(2n) {
+
+            picture {
+                width: calc(45vw - 1rem);
+                border-right: none;
+                border-left: none;
+                transition: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contianerDevs {
+
+        .containerWorks, .containerWorks:nth-of-type(2n) {
+            justify-content: flex-start;
+            width: 80%;
+            min-height: 40rem;
+            padding: 0;
+            padding-left: 3rem;
+
+            picture {
+                width: 100%;
+                height: 100%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin: 0 auto;
+                border-right: none;
+                border-left: none;
+                box-shadow: 4px 6px 5px 0px rgba(0,0,0,1);
+
+                img {
+                    filter: grayscale(60%) contrast(1) brightness(90%);
+                }
+                .imageWrapper {
+                    background-color: #001b24e6;
+                }
+
+                &:hover {
+                    transform: translate(0);
+
+                    img {
+                        filter: grayscale(60%);
+                    }
+
+                    .imageWrapper {
+                        background-color: rgb(0 27 36);
+                    }
+                }
+            }
+
+            .containerinfoDev {
+
+                .titleinfoDev {
+                    text-align: start;
+                    color: #08fdd8;
+                    // font-size: 3.2vw;
+                }
+                .infoDev {
+                    text-align: start;
+                    background-color: transparent;
+                    padding: 0;
+                    margin-top: 2.4rem;
+                    width: 95%;
+                }
+                ul {
+                    justify-content: flex-start;
+
+                    li {
+                        margin: 5px 1rem 5px 0;
+                    }
+                }
+
+                .iconsRepositories {
+
+                    li {
+                        margin: 1rem 2rem 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contianerDevs {
+        padding: 9rem 1rem;
+
+        .contentTitle {
+            width: 95%;
+
+            h1 {
+                font-size: 3rem;
+                white-space: normal;
+                opacity: 0;
+                animation: MoveY 1s forwards;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        .containerWorks, .containerWorks:nth-of-type(2n) {
+            min-height: 42rem;
+            margin: 7rem auto 0;
+            padding-left: 2.2rem;
+            animation: MoveY 1s .2s forwards;
+
+
+            .containerinfoDev {
+                width: 100%;
+
+                .titleinfoDev {
+                    font-size: 2.4rem;
+                }
+                .infoDev {
+                    font-size: 1.6rem;
+                }
+                ul {
+
+                    li {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .contianerDevs {
+        padding: 9rem 1rem;
+
+        .contentTitle {
+            width: 95%;
+
+            h1 {
+                font-size: 7vw;
+                white-space: normal;
+            }
+        }
+
+        .containerWorks, .containerWorks:nth-of-type(2n) {
+            margin: 7rem auto 0;
+            width: 99%;
+            min-height: 35rem;
+            padding-left: 1.5rem;
+
+            .containerinfoDev {
+
+                .titleinfoDev {
+                    font-size: 5vw;
+                }
+                .infoDev {
+                    font-size: 3vw;
+                }
+                ul {
+
+                    li {
+                        font-size: 2.8vw;
+                    }
+                }
+            }
+        }
+
+        // .containerWorks:nth-of-type(1) {
+        //     margin-top: 3rem;
+        // }
+    }
+}
+
+@keyframes MoveY {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
