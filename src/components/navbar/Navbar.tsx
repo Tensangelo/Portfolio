@@ -1,3 +1,4 @@
+import React, { AnchorHTMLAttributes, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Style from '@styles/navbar/navbar.module.scss';

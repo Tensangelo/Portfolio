@@ -24,7 +24,7 @@ const Landing = () => {
                     <span></span>
                 </Link>
             </article>
-            {/* <AnimationSnow /> */}
+            <AnimationSnow />
         </section>
     )
 }
