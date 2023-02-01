@@ -1,0 +1,80 @@
+@media (max-width: 1440px) {
+    .containerContact {
+        background: transparent;
+    }
+}
+
+@media (max-width: 1024px) {
+    .containerContact {
+        padding: 9rem 3rem 0;
+
+        .infoContact {
+            max-width: 75rem;
+            margin: 0 auto;
+        }
+        .infoSocial {
+            max-width: 75rem;
+            margin: 4rem auto 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .containerContact {
+
+        .infoContact {
+
+            .descriptionContact {
+
+                h1 {
+                    font-size: 7vw;
+                    width: 65vw;
+                }
+                p {
+                    font-size: 3vw;
+                }
+            }
+
+            .formsMessage {
+
+                .containerInputs,
+                .containerInputs:nth-of-type(1),
+                .containerInputs:nth-of-type(2) {
+                    width: 100%;
+
+                    input, textarea {
+                        font-size: 2.8vw;
+                    }
+                }
+
+                .containerBtnSubmit {
+
+                    .btnSubmit {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .containerContact {
+
+        .infoSocial {
+            display: flex;
+            max-width: 100%;
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+
+            article {
+
+                h2 {
+                    font-size: 5vw;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
