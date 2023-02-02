@@ -12,6 +12,11 @@
     background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
     animation: appearance 1s 1.8s forwards;
 
+    @media (max-width: 768px) {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .sign {
         position: absolute;
         display: flex;
@@ -24,7 +29,7 @@
         left: 50%;
         top: 50%;
         text-transform: uppercase;
-        font-size: 6em;
+        font-size: 6rem;
         animation: shine 2s forwards, flicker 3s infinite;
 
         .fastFlicker {
@@ -32,6 +37,11 @@
         }
         .flicker {
             animation: shine 2s forwards, blink 3s 2s infinite;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 8vw;
+            width: 100%;
         }
     }
 }
