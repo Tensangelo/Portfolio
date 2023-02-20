@@ -17,7 +17,7 @@ const Urls = {
     repositories: {
         managmentUser: {
             gitHub: 'https://github.com/Tensangelo/ManagementUser',
-            page: 'https://management-user-neon.vercel.app/',
+            page: 'https://user-manager-ang.vercel.app/',
         }
     }
 }
