@@ -1,3 +1,5 @@
+@use '../landing.module.scss' as StyleLanding;
+
 @media (max-width: 1440px) {
     .containerWelcome {
         background-size: 400% 100%;

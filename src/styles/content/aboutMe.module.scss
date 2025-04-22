@@ -131,6 +131,15 @@
             li:nth-of-type(9) {
                 animation: textScroll 1s 2.1s forwards;
             }
+            li:nth-of-type(10) {
+                animation: textScroll 1s 2.1s forwards;
+            }
+            li:nth-of-type(11) {
+                animation: textScroll 1s 2.1s forwards;
+            }
+            li:nth-of-type(12) {
+                animation: textScroll 1s 2.1s forwards;
+            }
         }
 
         .bar {
@@ -293,5 +302,3 @@
         left: 60%;
     }
 }
-
-@import './media-queries/aboutme.module.scss';

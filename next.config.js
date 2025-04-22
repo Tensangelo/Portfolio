@@ -10,7 +10,7 @@ const nextConfig = {
   },
   images: {
     domains: [
-      'randomuser.me',
+      'math.randomuser.me',
       'upload.wikimedia.org',
       'www.nacion.com',
     ],

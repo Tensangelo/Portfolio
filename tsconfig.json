@@ -2,15 +2,31 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@images/*": ["public/images/*"],
-			"@styles/*": ["src/styles/*"],
-			"@components/*": ["src/components/*"],
-			"@database/*": ["src/database/*"],
-			"@context/*": ["src/context/*"],
+      "@images/*": [
+        "public/images/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@database/*": [
+        "src/database/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ]
     },
-    "typeRoots": ["./src/types"],
+    "typeRoots": [
+      "./src/types"
+    ],
     "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -22,8 +38,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+, "src/app/Extras", "src/app/Developments", "src/app/Contact"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

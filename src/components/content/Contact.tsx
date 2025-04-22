@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Styles from '@styles/content/contact.module.scss';
+// Styles
+import Styles from '@styles/content/media-queries/contact.module.scss';
 // Emailjs
-import { sendForm } from 'emailjs-com';
+import { sendForm } from '@emailjs/browser';
 // Icons
 import Icon from '@mdi/react';
 import { mdiGithub, mdiLinkedin, mdiCodepen, mdiLoading } from '@mdi/js';
@@ -122,7 +123,6 @@ const Contact = () => {
                         <span>Github</span>
                         <Link href={github} rel='MyGithub' target='_blank'>
                             <Icon
-                                title={'Icon github'}
                                 path={mdiGithub}
                                 size={'3.5rem'}
                             />
@@ -132,7 +132,6 @@ const Contact = () => {
                         <span>Linkedin</span>
                         <Link href={linkedin} rel='MyGithub' target='_blank'>
                             <Icon
-                                title={'Icon linkedin'}
                                 path={mdiLinkedin}
                                 size={'3.5rem'}
                             />
@@ -142,7 +141,6 @@ const Contact = () => {
                         <span>CodePen</span>
                         <Link href={codePen} rel='MyGithub' target='_blank'>
                             <Icon
-                                title={'Icon codepen'}
                                 path={mdiCodepen}
                                 size={'3.5rem'}
                             />

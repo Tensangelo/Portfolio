@@ -1,14 +1,17 @@
-import Styles from '@styles/content/aboutMe.module.scss';
+import Styles from '@styles/content/media-queries/aboutme.module.scss';
 
 const AboutMe = () => {
 
     const Technologies = [
         'JavaScript (ES6+)',
-        'React',
         'Node.js',
+        'React',
         'Next.js',
         'Nest.js',
+        'Express.js',
         'Sass',
+        'Astro',
+        'Tailwind',
         'PostgreSql',
         'Mongo db',
         'Graphql',

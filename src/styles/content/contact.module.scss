@@ -150,7 +150,7 @@
                         display: block;
                         position: absolute;
                         width: 10%;
-                        background-color: #000000;
+                        background-color: #001b24;
                         height: .3rem;
                         right: 20%;
                         top: -0.21rem;
@@ -162,7 +162,7 @@
                         display: block;
                         position: absolute;
                         width: 10%;
-                        background: #000000;
+                        background: #001b24;
                         height: .3rem;
                         left: 20%;
                         bottom: -0.25rem;
@@ -420,5 +420,3 @@
         transform: rotate(359deg);
     }
 }
-
-@import './media-queries//contact.module.scss';
