@@ -1,3 +1,4 @@
+'use client'
 import ComponentContact from "@components/content/Contact";
 // Utils
 import Info from '@database/info';
@@ -12,8 +13,8 @@ const Contact = () => {
             <style global jsx>
                 {`
                     menu nav a[href^="${contact}"] {
-                        color: #08fdd8;
-                        border-bottom: 1px solid #08fdd8;
+                        color: #08fdd8 !important;
+                        border-bottom: 1px solid #08fdd8 !important;
                     }
                 `}
             </style>

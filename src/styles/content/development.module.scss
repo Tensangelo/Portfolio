@@ -17,6 +17,10 @@
             animation: type 1.5s steps(40,end) .1s forwards, blink .5s step-end infinite alternate;
             display: inline-flex;
             align-items: flex-end;
+            text-shadow:
+                0 0 2px #78b3d6,
+                0 0 4px #4bc6b6,
+                0 0 6px #4bc6b6;
         }
 
         span {
@@ -59,11 +63,10 @@
             display: flex;
             width: 55rem;
             height: 30rem;
-            border-right: 2px solid #08fdd8;
             border-radius: .8rem;
             position: absolute;
             left: 2rem;
-            top: 2rem;
+            top: 6rem;
             transition: .3s ease all;
 
             img {
@@ -80,7 +83,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                // background-color: #08fcd733;
+                border-radius: .8rem;
                 background-color: #0072ff33;
                 transition: .3s ease all;
             }
@@ -106,16 +109,29 @@
                 color: #08fdd8;
             }
 
+            .companyInfoDev {
+                text-align: end;
+                font-size: 2rem;
+                margin-top: 1rem;
+                font-style: italic;
+            }
+
             .infoDev {
                 font-size: 1.8rem;
                 text-align: end;
                 background-color: #242e3c;
                 margin-top: 2rem;
-                padding: 4rem 2rem;
+                padding: 4rem 2rem 2rem;
                 max-width: 60rem;
-                border-radius: .8rem;
+                // border-radius: .8rem;
+                border-top-right-radius: .8rem;
+                border-top-left-radius: .8rem;
                 line-height: 1.8;
             }
+        }
+
+        .infoTechnologies {
+            background-color: #242e3c;
         }
 
         ul {
@@ -123,12 +139,19 @@
             display: flex;
             justify-content: flex-end;
             flex-wrap: wrap;
-            margin-top: 2rem;
+            padding: 1rem 1rem 2rem;
+            border-bottom-right-radius: .8rem;
+            border-bottom-left-radius: .8rem;
+            // margin-top: 2rem;
 
             li {
                 margin: 5px 1rem;
                 font-size: 1.4rem;
-                color: #8b969b;
+                color: #08fdd8;
+                text-shadow:
+                    0 0 2px #78b3d6,
+                    0 0 4px #08fdd8,
+                    0 0 4px #08fdd8;
             }
         }
 
@@ -157,7 +180,6 @@
                 left: inherit;
                 right: 2rem;
                 border-right: none;
-                border-left: 2px solid #08fdd8;
 
                 &:hover {
                     transform: translate(5px, -5px);
@@ -167,6 +189,10 @@
             .containerinfoDev {
 
                 .titleinfoDev {
+                    text-align: start;
+                }
+
+                .companyInfoDev {
                     text-align: start;
                 }
 
@@ -362,5 +388,3 @@
         left: 0%;
     }
 }
-
-@import './media-queries/development.module.scss';

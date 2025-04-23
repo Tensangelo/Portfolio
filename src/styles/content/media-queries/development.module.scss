@@ -1,3 +1,5 @@
+@use '../development.module.scss';
+
 @media (max-width: 1440px) {
     .contianerDevs {
 
@@ -30,6 +32,8 @@
             width: 80%;
             min-height: 40rem;
             padding: 0;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
             padding-left: 3rem;
 
             picture {
@@ -42,7 +46,7 @@
                 margin: 0 auto;
                 border-right: none;
                 border-left: none;
-                box-shadow: 4px 6px 5px 0px rgba(0,0,0,1);
+                box-shadow: -4px 6px 5px 0px rgba(0,0,0,1);
 
                 img {
                     filter: grayscale(60%) contrast(1) brightness(90%);
@@ -71,6 +75,11 @@
                     color: #08fdd8;
                     // font-size: 3.2vw;
                 }
+
+                .companyInfoDev {
+                    text-align: start;
+                }
+
                 .infoDev {
                     text-align: start;
                     background-color: transparent;
@@ -129,6 +138,11 @@
                 .titleinfoDev {
                     font-size: 2.4rem;
                 }
+
+                .companyInfoDev {
+                    font-size: 1.6rem;
+                }
+
                 .infoDev {
                     font-size: 1.6rem;
                 }
@@ -167,6 +181,11 @@
                 .titleinfoDev {
                     font-size: 5vw;
                 }
+
+                .companyInfoDev {
+                    font-size: 4vw;
+                }
+
                 .infoDev {
                     font-size: 3vw;
                 }

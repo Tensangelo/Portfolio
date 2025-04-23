@@ -1,21 +1,17 @@
+import React from 'react';
 import Link from 'next/link';
-import Styles from '@styles/content/development.module.scss';
 import Image from 'next/image';
 
+// Styles
+import Styles from '@styles/content/media-queries/development.module.scss';
+// Icons
 import Icon from '@mdi/react';
 import { mdiGithub, mdiOpenInNew  } from '@mdi/js';
-// Images
-import veranoPage from '@images/works/verano.png'
-import timeTracker from '@images/works/timeTracker.jpg'
-import MangmentUser from '@images/works/managmentUser.png'
+
 // Utils
-import Info from '@database/info';
+import DevelopmentsData from '@database/projects';
 
 const Developments = () => {
-
-    const { repositories } = Info;
-    const { managmentUser } = repositories;
-    const { gitHub, page } = managmentUser
 
     return (
         <section className={Styles.contianerDevs}>
@@ -27,123 +23,63 @@ const Developments = () => {
                     <span></span>
                 </h1>
             </article>
-            <div className={Styles.containerWorks}>
-                <picture>
-                    <Image
-                        src={veranoPage}
-                        alt='Interfaz pagina verano'
-                    />
-                    <div className={Styles.imageWrapper}></div>
-                </picture>
-                <article className={Styles.containerinfoDev}>
-                    <p className={Styles.titleinfoDev}>
-                        Página Web Corporativa
-                    </p>
-                    <p className={Styles.infoDev}>
-                        Una página web enfocada en informar y destacar los productos, servicios, valores, objetivos y detalles de la entidad.
-                        <br />
-                        <br />
-                        Desarrollada de forma progresiva con responsive y mejoras en diseño para el uso interactivo de su uso informativo.
-                    </p>
-                    <ul>
-                        <li>React.js</li>
-                        <li>Next.js</li>
-                        <li>Sass</li>
-                        <li>Responsive Design</li>
-                        <li>Styled Components</li>
-                    </ul>
-                </article>
-                <div className={`${Styles.bar} ${Styles.barLeft}`}></div>
-                <div className={`${Styles.bar} ${Styles.barTop}`}></div>
-                <div className={`${Styles.bar} ${Styles.barRight}`}></div>
-                <div className={`${Styles.bar} ${Styles.barBottom}`}></div>
-            </div>
-            <div className={Styles.containerWorks}>
-                <picture>
-                    <Image
-                        src={timeTracker}
-                        alt='Interfaz time tracker'
-                    />
-                    <div className={Styles.imageWrapper}></div>
-                </picture>
-                <article className={Styles.containerinfoDev}>
-                    <p className={Styles.titleinfoDev}>
-                        Time Tracking
-                    </p>
-                    <p className={Styles.infoDev}>
-                        Un aplicativo web con la principal función de registrar las horas de trabajo de los empleados, con la posibilidad de recopilar fechas, grupos, proyectos, países, entre otros datos del registro de tiempo.
-                        <br />
-                        <br />
-                        Entrega de informes como presupuesto de proyectos, gestión de proyectos, nómina y análisis de productividad.
-                    </p>
-                    <ul>
-                        <li>React.js</li>
-                        <li>Typescript</li>
-                        <li>Next.js</li>
-                        <li>Nest.js</li>
-                        <li>GraphQL</li>
-                        <li>PostgreSql</li>
-                    </ul>
-                </article>
-                <div className={`${Styles.bar} ${Styles.barLeft}`}></div>
-                <div className={`${Styles.bar} ${Styles.barTop}`}></div>
-                <div className={`${Styles.bar} ${Styles.barRight}`}></div>
-                <div className={`${Styles.bar} ${Styles.barBottom}`}></div>
-            </div>
-            <div className={Styles.containerWorks}>
-                <picture>
-                    <Image
-                        src={MangmentUser}
-                        alt='Interfaz time tracker'
-                    />
-                    <div className={Styles.imageWrapper}></div>
-                </picture>
-                <article className={Styles.containerinfoDev}>
-                    <p className={Styles.titleinfoDev}>
-                        Administrador de usuarios
-                    </p>
-                    <p className={Styles.infoDev}>
-                        Aplicativo web que permite la creación, visualización y modificación de usuarios, así como también la eliminación de los mismos.
-                        <br />
-                        <br />
-                        Búsqueda de usuarios por Id´s, paginación y límite de registros por página.
-                    </p>
-                    <ul>
-                        <li>React.js</li>
-                        <li>Typescript</li>
-                        <li>Next.js</li>
-                        <li>API services</li>
-                        <li>Sass</li>
-                        <li>Material Ui</li>
-                    </ul>
-                    <ul className={Styles.iconsRepositories}>
-                        <li>
-                            <Link href={gitHub} rel='MyGithub' target='_blank'>
-                                <Icon
-                                    title={'Icon github'}
-                                    path={mdiGithub}
-                                    size={'3rem'}
-                                    color='#8b969b'
-                                />
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href={page} rel='MyGithub' target='_blank'>
-                                <Icon
-                                    title={'Icon opne in new'}
-                                    path={mdiOpenInNew}
-                                    size={'3rem'}
-                                    color='#8b969b'
-                                />
-                            </Link>
-                        </li>
-                    </ul>
-                </article>
-                <div className={`${Styles.bar} ${Styles.barLeft}`}></div>
-                <div className={`${Styles.bar} ${Styles.barTop}`}></div>
-                <div className={`${Styles.bar} ${Styles.barRight}`}></div>
-                <div className={`${Styles.bar} ${Styles.barBottom}`}></div>
-            </div>
+
+            {DevelopmentsData.map((dev, index) => (
+                <div key={index} className={Styles.containerWorks}>
+                    <picture>
+                        <Image src={dev.image} alt={dev.alt} />
+                        <div className={Styles.imageWrapper}></div>
+                    </picture>
+
+                    <article className={Styles.containerinfoDev}>
+                        <p className={Styles.titleinfoDev}>{dev.title}</p>
+                        <h2
+                            className={Styles.companyInfoDev}
+                            style={{ color: dev.colorCompany }}
+                        >
+                            {dev.company}
+                        </h2>
+                        <p className={Styles.infoDev}>
+                            {dev.description.split('\n').map((line, i) => (
+                                <React.Fragment key={i}>
+                                    {line}
+                                    <br />
+                                </React.Fragment>
+                            ))}
+                        </p>
+
+                        <ul className={Styles.infoTechnologies}>
+                            {dev.technologies.map((tech, i) => (
+                                <li key={i}>{tech}</li>
+                            ))}
+                        </ul>
+
+                        {dev.links && (
+                            <ul className={Styles.iconsRepositories}>
+                                {dev.links.github && (
+                                    <li>
+                                        <Link href={dev.links?.github} rel='MyGithub' target='_blank'>
+                                            <Icon path={mdiGithub} size='3rem' color='#8b969b' />
+                                        </Link>
+                                    </li>
+                                )}
+                                {dev.links.page && (
+                                    <li>
+                                        <Link href={dev.links.page} rel='MyGithub' target='_blank'>
+                                            <Icon path={mdiOpenInNew} size='3rem' color='#8b969b' />
+                                        </Link>
+                                    </li>
+                                )}
+                            </ul>
+                        )}
+                    </article>
+
+                    <div className={`${Styles.bar} ${Styles.barLeft}`}></div>
+                    <div className={`${Styles.bar} ${Styles.barTop}`}></div>
+                    <div className={`${Styles.bar} ${Styles.barRight}`}></div>
+                    <div className={`${Styles.bar} ${Styles.barBottom}`}></div>
+                </div>
+            ))}
         </section>
     )
 }

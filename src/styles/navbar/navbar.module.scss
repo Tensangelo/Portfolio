@@ -128,12 +128,35 @@
         width: 100%;
         height: 100%;
 
+        .developmentsLink {
+            position: relative;
+
+            // Animación arco iris en el texto
+            .newLabel {
+                position: absolute;
+                top: -1.2rem;
+                right: -0.2rem;
+                font-size: 1rem;
+                font-weight: normal;
+                margin-right: 8px;
+                color: transparent;
+                background: linear-gradient(90deg, #ff0000, #ff7300, #fffb00, #4bff00, #00d4ff, #0044ff, #9c00ff, #ff00c4, #ff4081, #ff0000, #ff7300);
+                background-size: 700% 100%; // Aumenta el tamaño para un desplazamiento fluido
+                background-clip: text;
+                -webkit-background-clip: text;
+                animation: rainbowText 3s linear infinite;
+
+                @media (max-width: 1024px) {
+                    right: 0;
+                    left: 12rem;
+                }
+            }
+        }
+
         a:not(.btnResume) {
             width: 100%;
             font-size: 1.6rem;
             text-align: center;
-            // color: #08fdd8;
-            // color: #ffffff;
             color: #8b969b;
             line-height: 5rem;
             border-bottom: 1px solid #303b3e;
@@ -164,11 +187,10 @@
                 text-align: center;
                 font-size: 1.8rem;
                 letter-spacing: 2px;
-                background-color: #a8b0b3;
+                background-color: #001b24;
                 color: #ffffff;
                 margin: 0 auto;
                 padding: 1.2rem;
-                // border: 1px solid #08fdd8;
                 position: relative;
 
                 &::after {
@@ -189,7 +211,7 @@
                         width: calc(100% + 2px);
                         height: calc(100% + 2px);
                         margin-left: calc(-50% - 1px);
-                        background-color: #08fdd8;
+                        background-color: #4ac2b2;
                     }
                 }
 
@@ -288,5 +310,25 @@
     }
     to {
         transform: rotate(225deg);
+    }
+}
+
+// Animación para el texto arco iris
+@keyframes rainbowText {
+    0% {
+        background-position: 0% 50%; // Comienza desde el inicio del gradiente
+    }
+    100% {
+        background-position: 100% 50%; // Mueve el gradiente de forma continua
+    }
+}
+
+// Animación para el borde arco iris
+@keyframes rainbowBorder {
+    0% {
+        background-position: 0% 50%; // Comienza desde el inicio del gradiente
+    }
+    100% {
+        background-position: 100% 50%; // Mueve el gradiente de forma continua
     }
 }

@@ -19,6 +19,10 @@
             overflow: hidden;
             width: 43rem;
             animation: shring-animation .8s steps(40,end) .1s forwards, blink .5s step-end infinite alternate;
+            text-shadow:
+                0 0 2px #78b3d6,
+                0 0 4px #4bc6b6,
+                0 0 6px #4bc6b6;
         }
 
         p {
@@ -129,6 +133,15 @@
                 animation: textScroll 1s 2s forwards;
             }
             li:nth-of-type(9) {
+                animation: textScroll 1s 2.1s forwards;
+            }
+            li:nth-of-type(10) {
+                animation: textScroll 1s 2.1s forwards;
+            }
+            li:nth-of-type(11) {
+                animation: textScroll 1s 2.1s forwards;
+            }
+            li:nth-of-type(12) {
                 animation: textScroll 1s 2.1s forwards;
             }
         }
@@ -293,5 +306,3 @@
         left: 60%;
     }
 }
-
-@import './media-queries/aboutme.module.scss';

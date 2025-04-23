@@ -37,11 +37,15 @@
         p {
             opacity: 0;
             font-size: 2.5rem;
-            color: #8d8d8d;
+            color: #94A3B8;
             white-space: nowrap;
             overflow: hidden;
             width: 44rem;
             animation: shring-animation 1.2s steps(40,end) 2.2s forwards, blink .5s step-end infinite alternate;
+
+            text-shadow:
+                0 0 1px #4ac2b2,
+                0 0 2px #4ac2b24d;
         }
 
         .buttonAboutMe {
@@ -66,7 +70,7 @@
                 display: block;
                 position: absolute;
                 width: 10%;
-                background-color: #000000;
+                background-color: #001b24;
                 height: .3rem;
                 right: 20%;
                 top: -0.21rem;
@@ -78,7 +82,7 @@
                 display: block;
                 position: absolute;
                 width: 10%;
-                background: #000000;
+                background: #001b24;
                 height: .3rem;
                 left: 20%;
                 bottom: -0.25rem;
@@ -167,6 +171,3 @@
         bottom: 0;
     }
 }
-
-// Media queris
-@import './media-queries/landing.module.scss';

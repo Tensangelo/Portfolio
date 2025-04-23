@@ -1,5 +1,6 @@
-import Styles from '@styles/content/extras.module.scss';
 import Link from 'next/link';
+// Styles
+import Styles from '@styles/content/media-queries/extras.module.scss';
 // Components
 import NeonSign from '@components/effectAnimatios/NeonSign';
 // Utils

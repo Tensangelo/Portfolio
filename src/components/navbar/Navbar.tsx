@@ -1,4 +1,6 @@
-import React, { AnchorHTMLAttributes, useEffect, useRef, useState } from 'react';
+'use client'
+
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Style from '@styles/navbar/navbar.module.scss';
@@ -10,14 +12,21 @@ import { mdiGithub, mdiLinkedin } from '@mdi/js';
 import Info from '@database/info';
 
 const Navbar = () => {
+    const navToggleRef = useRef<HTMLInputElement>(null);
 
     const { pages, contactRed } = Info;
     const { aboutMe, developments, contact, extras } = pages;
     const { linkedin, github, resume } = contactRed;
 
+    const handleCloseMenu = () => {
+        if (navToggleRef.current) {
+            navToggleRef.current.checked = false;
+        }
+    };
+
     return (
         <>
-            <input id='switchNav' className={Style.switch} type={'checkbox'} />
+            <input ref={navToggleRef} id='switchNav' className={Style.switch} type={'checkbox'} />
             <div className={Style.switchNav}>
                 <label htmlFor='switchNav'>
                     <span></span>
@@ -25,7 +34,7 @@ const Navbar = () => {
             </div>
             <menu className={Style.containerMenu}>
                 <div className={Style.containerLogo}>
-                    <Link rel='home' href={'/'}>
+                    <Link rel='home' href={'/'} onClick={handleCloseMenu}>
                         <Image
                             alt='Logo personal'
                             src={Logo}
@@ -34,16 +43,17 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <nav>
-                    <Link rel='aboutMe' href={aboutMe}>
+                    <Link rel='aboutMe' href={aboutMe} onClick={handleCloseMenu}>
                         Acerca de mí
                     </Link>
-                    <Link rel='developments' href={developments}>
+                    <Link rel='developments' href={developments} onClick={handleCloseMenu} className={Style.developmentsLink}>
                         Desarrollos
+                        <span className={Style.newLabel}>New</span>
                     </Link>
-                    <Link rel='contact' href={contact}>
+                    <Link rel='contact' href={contact} onClick={handleCloseMenu}>
                         Contacto
                     </Link>
-                    <Link rel='extras' href={extras}>
+                    <Link rel='extras' href={extras} onClick={handleCloseMenu}>
                         Extras
                     </Link>
                     <div id='btnResume' className={Style.resume}>
@@ -53,17 +63,15 @@ const Navbar = () => {
                     </div>
                 </nav>
                 <section className={Style.IconsSocial}>
-                    <Link href={linkedin} rel='MyLinkedin' target='_blank'>
+                    <Link href={linkedin} rel='MyLinkedin' target='_blank' aria-label='Dirigir al perfil de linkedin'>
                         <Icon
-                            title={'Icon linkedin'}
                             path={mdiLinkedin}
                             size={'3rem'}
                             color='#8b969b'
                         />
                     </Link>
-                    <Link href={github} rel='MyGithub' target='_blank'>
+                    <Link href={github} rel='MyGithub' target='_blank' aria-label='Dirigir al perfil de github'>
                         <Icon
-                            title={'Icon github'}
                             path={mdiGithub}
                             size={'3rem'}
                             color='#8b969b'
