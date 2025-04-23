@@ -46,8 +46,9 @@ const Navbar = () => {
                     <Link rel='aboutMe' href={aboutMe} onClick={handleCloseMenu}>
                         Acerca de mí
                     </Link>
-                    <Link rel='developments' href={developments} onClick={handleCloseMenu}>
+                    <Link rel='developments' href={developments} onClick={handleCloseMenu} className={Style.developmentsLink}>
                         Desarrollos
+                        <span className={Style.newLabel}>New</span>
                     </Link>
                     <Link rel='contact' href={contact} onClick={handleCloseMenu}>
                         Contacto
