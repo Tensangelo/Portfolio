@@ -19,6 +19,10 @@
             overflow: hidden;
             width: 43rem;
             animation: shring-animation .8s steps(40,end) .1s forwards, blink .5s step-end infinite alternate;
+            text-shadow:
+                0 0 2px #78b3d6,
+                0 0 4px #4bc6b6,
+                0 0 6px #4bc6b6;
         }
 
         p {

@@ -33,6 +33,12 @@ const Developments = () => {
 
                     <article className={Styles.containerinfoDev}>
                         <p className={Styles.titleinfoDev}>{dev.title}</p>
+                        <h2
+                            className={Styles.companyInfoDev}
+                            style={{ color: dev.colorCompany }}
+                        >
+                            {dev.company}
+                        </h2>
                         <p className={Styles.infoDev}>
                             {dev.description.split('\n').map((line, i) => (
                                 <React.Fragment key={i}>
@@ -41,7 +47,8 @@ const Developments = () => {
                                 </React.Fragment>
                             ))}
                         </p>
-                        <ul>
+
+                        <ul className={Styles.infoTechnologies}>
                             {dev.technologies.map((tech, i) => (
                                 <li key={i}>{tech}</li>
                             ))}
@@ -49,16 +56,20 @@ const Developments = () => {
 
                         {dev.links && (
                             <ul className={Styles.iconsRepositories}>
-                                <li>
-                                    <Link href={dev.links.github} rel='MyGithub' target='_blank'>
-                                        <Icon path={mdiGithub} size='3rem' color='#8b969b' />
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={dev.links.page} rel='MyGithub' target='_blank'>
-                                        <Icon path={mdiOpenInNew} size='3rem' color='#8b969b' />
-                                    </Link>
-                                </li>
+                                {dev.links.github && (
+                                    <li>
+                                        <Link href={dev.links?.github} rel='MyGithub' target='_blank'>
+                                            <Icon path={mdiGithub} size='3rem' color='#8b969b' />
+                                        </Link>
+                                    </li>
+                                )}
+                                {dev.links.page && (
+                                    <li>
+                                        <Link href={dev.links.page} rel='MyGithub' target='_blank'>
+                                            <Icon path={mdiOpenInNew} size='3rem' color='#8b969b' />
+                                        </Link>
+                                    </li>
+                                )}
                             </ul>
                         )}
                     </article>

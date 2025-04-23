@@ -37,11 +37,15 @@
         p {
             opacity: 0;
             font-size: 2.5rem;
-            color: #8d8d8d;
+            color: #94A3B8;
             white-space: nowrap;
             overflow: hidden;
             width: 44rem;
             animation: shring-animation 1.2s steps(40,end) 2.2s forwards, blink .5s step-end infinite alternate;
+
+            text-shadow:
+                0 0 1px #4ac2b2,
+                0 0 2px #4ac2b24d;
         }
 
         .buttonAboutMe {

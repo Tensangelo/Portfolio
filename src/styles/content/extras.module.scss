@@ -14,6 +14,10 @@
             overflow: hidden;
             width: 18rem;
             animation: shring-animation .5s steps(40,end) forwards, blink .5s step-end infinite alternate;
+            text-shadow:
+                0 0 2px #78b3d6,
+                0 0 4px #4bc6b6,
+                0 0 6px #4bc6b6;
         }
 
         p {
@@ -48,7 +52,7 @@
                 display: block;
                 position: absolute;
                 width: 10%;
-                background-color: #000000;
+                background-color: #001b24;
                 height: .3rem;
                 right: 20%;
                 top: -0.21rem;
@@ -60,7 +64,7 @@
                 display: block;
                 position: absolute;
                 width: 10%;
-                background: #000000;
+                background: #001b24;
                 height: .3rem;
                 left: 20%;
                 bottom: -0.25rem;
@@ -96,6 +100,11 @@
             overflow: hidden;
             width: 42rem;
             animation: type 1s steps(40,end) 1s forwards, blink .5s step-end infinite alternate;
+
+            text-shadow:
+                0 0 2px #78b3d6,
+                0 0 4px #4bc6b6,
+                0 0 6px #4bc6b6;
         }
     }
 
