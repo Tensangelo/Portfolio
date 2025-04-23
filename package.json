@@ -23,7 +23,6 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.3.1",
     "sass": "^1.87.0"
   }
 }
