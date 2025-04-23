@@ -62,14 +62,14 @@ const Navbar = () => {
                     </div>
                 </nav>
                 <section className={Style.IconsSocial}>
-                    <Link href={linkedin} rel='MyLinkedin' target='_blank'>
+                    <Link href={linkedin} rel='MyLinkedin' target='_blank' aria-label='Dirigir al perfil de linkedin'>
                         <Icon
                             path={mdiLinkedin}
                             size={'3rem'}
                             color='#8b969b'
                         />
                     </Link>
-                    <Link href={github} rel='MyGithub' target='_blank'>
+                    <Link href={github} rel='MyGithub' target='_blank' aria-label='Dirigir al perfil de github'>
                         <Icon
                             path={mdiGithub}
                             size={'3rem'}
