@@ -39,6 +39,8 @@ const Navbar = () => {
                             alt='Logo personal'
                             src={Logo}
                             priority={true}
+                            width={130}
+                            height={130}
                         />
                     </Link>
                 </div>
