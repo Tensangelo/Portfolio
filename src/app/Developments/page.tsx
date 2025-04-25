@@ -1,7 +1,14 @@
 'use client'
+
+import React from "react";
+// Components
 import ComponentDevelopments from "@components/content/Developments";
+// Styles
+import Styles from '@styles/content/media-queries/development.module.scss';
 // Utils
 import Info from '@database/info';
+import DevelopmentsData from '@database/projects';
+
 
 const Developments = () => {
     const { pages } = Info;
@@ -14,8 +21,21 @@ const Developments = () => {
     }
 
     return (
-        <>
-            <ComponentDevelopments />
+        <section className={Styles.contianerDevs}>
+            <article className={Styles.contentTitle}>
+                <h1>
+                    Algunas cosas que he construido
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </h1>
+            </article>
+
+            {DevelopmentsData.map((dev, index) => {
+                return (
+                    <ComponentDevelopments key={index} {...dev} />
+                )
+            })}
             <style global jsx>
                 {`
                     menu nav a[href^="${developments}"] {
@@ -29,7 +49,7 @@ const Developments = () => {
                     }
                 `}
             </style>
-        </>
+        </section>
     )
 }
 

@@ -1,32 +1,19 @@
-import { StaticImageData } from 'next/image';
 // Images
 import veranoPage from '@images/works/verano.png';
 import timeTracker from '@images/works/timeTracker.jpg';
 import nivalPage from '@images/works/nival.png';
 // Utils
 import Info from '@database/info';
+import { Development } from '@type/types';
 
 const { repositories } = Info;
-const { nival } = repositories;
-
-type Development = {
-    company: string;
-    title: string;
-    description: string;
-    technologies: string[];
-    image: StaticImageData;
-    alt: string;
-    colorCompany?: string;
-    links?: {
-        github?: string;
-        page?: string;
-    };
-};
+const { verano, nival } = repositories;
 
 const DevelopmentsData: Development[] = [
     {
         company: 'Nival',
         colorCompany: '#ffffff',
+        isProjectNew: true,
         title: 'Landing Page de Presentación',
         description: `Diseñé y desarrollé una landing page para Nival, una marca emergente que buscaba una presencia digital simple pero con carácter.
 
@@ -48,6 +35,9 @@ const DevelopmentsData: Development[] = [
         technologies: ['React.js', 'Next.js', 'Sass', 'Responsive Design', 'Styled Components'],
         image: veranoPage,
         alt: 'Interfaz pagina verano',
+        links: {
+            page: verano.page
+        }
     },
     {
         company: 'Verano Ingenieria',

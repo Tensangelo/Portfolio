@@ -3,6 +3,9 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// Components
+import { NewSign } from '@components/effectAnimatios/newSign';
+// Styles
 import Style from '@styles/navbar/navbar.module.scss';
 // Icon
 import Logo from '@images/logo.png'
@@ -50,7 +53,7 @@ const Navbar = () => {
                     </Link>
                     <Link rel='developments' href={developments} onClick={handleCloseMenu} className={Style.developmentsLink}>
                         Desarrollos
-                        <span className={Style.newLabel}>New</span>
+                        <NewSign label='New' />
                     </Link>
                     <Link rel='contact' href={contact} onClick={handleCloseMenu}>
                         Contacto

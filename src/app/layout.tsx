@@ -1,9 +1,17 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 // Styles
 import '../styles/global.scss';
 // Components
 import Layout from '@components/Layout';
+
+const inter = Inter({
+    subsets: ['latin'],
+    weight: ['100', '300', '400', '500', '700', '900'],
+    variable: '--font-inter',
+    display: 'swap',
+});
 
 export const metadata: Metadata = {
     title: 'Angelo Gaona',
@@ -20,7 +28,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: 'Angelo Gaona | Front End Developer & Back end Developer',
-        description: 'Modern portfolio showcasing web development skills, projects and experience of Angelo Gaona.',
+        description: 'Portafolio moderno que muestra las habilidades en desarrollo web, proyectos y experiencia de Angelo Gaona.',
         url: 'https://portfolio-ang.vercel.app/',
         siteName: 'Angelo Gaona Portfolio',
         images: [
@@ -44,7 +52,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{children: ReactNode}>) {
     return (
-        <html lang="es">
+        <html lang="es" className={`${inter.variable}`}>
             <body className="my-body-class">
                 <Layout>
                     {children}
