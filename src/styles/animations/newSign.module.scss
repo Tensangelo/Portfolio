@@ -1,0 +1,19 @@
+// Animación arco iris en el texto
+.newLabel {
+    color: transparent;
+    background: linear-gradient(90deg, #ff0000, #ff7300, #fffb00, #4bff00, #00d4ff, #0044ff, #9c00ff, #ff00c4, #ff4081, #ff0000, #ff7300);
+    background-size: 700% 100%; // Aumenta el tamaño para un desplazamiento fluido
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: rainbow 3s linear infinite;
+}
+
+// Animación para el texto arco iris
+@keyframes rainbow{
+    0% {
+        background-position: 0% 50%; // Comienza desde el inicio del gradiente
+    }
+    100% {
+        background-position: 100% 50%; // Mueve el gradiente de forma continua
+    }
+}

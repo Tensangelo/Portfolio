@@ -47,6 +47,7 @@
     }
 
     .containerWorks {
+        background-color: #001b24;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -83,7 +84,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                border-radius: .8rem;
+                border-radius: .6rem;
                 background-color: #0072ff33;
                 transition: .3s ease all;
             }
@@ -243,7 +244,7 @@
             width: 4px;
             animation: barLeft 5s linear infinite;
             animation-delay: 4s;
-        };
+        }
         .barTop {
             height: 4px;
             animation: barTop 5s linear infinite;
@@ -257,7 +258,6 @@
         .barBottom {
             height: 4px;
             animation: barBottom 5s linear infinite;
-            // animation-delay: 4s;
         }
     }
 }
@@ -303,7 +303,6 @@
         transform: translateY(0);
     }
 }
-
 
 @keyframes barLeft{
     0%  {

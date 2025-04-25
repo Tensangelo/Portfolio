@@ -19,6 +19,9 @@ const Urls = {
             gitHub: 'https://github.com/Tensangelo/ManagementUser',
             page: 'https://user-manager-ang.vercel.app/',
         },
+        verano: {
+            page: 'https://verano.com.co/'
+        },
         nival: {
             page: 'https://www.niyval.com/'
         }
