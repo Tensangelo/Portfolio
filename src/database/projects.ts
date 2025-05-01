@@ -18,7 +18,7 @@ const DevelopmentsData: Development[] = [
         description: `Diseñé y desarrollé una landing page para Nival, una marca emergente que buscaba una presencia digital simple pero con carácter.
 
             El enfoque fue minimalista: manteniendo una experiencia visual atractiva enfocado en la experiencia del usuario y optimizado para distintos dispositivos.`,
-        technologies: ['Astro.js', 'React.js', 'Sass', 'Responsive Design', 'Animation Design'],
+        technologies: ['Astro.js', 'React.js', 'Scss', 'Responsive Design', 'Animation Design'],
         image: nivalPage,
         alt: 'Interfaz pagina nival',
         links: {
@@ -32,7 +32,7 @@ const DevelopmentsData: Development[] = [
         description: `Una página web enfocada en informar y destacar los productos, servicios, valores, objetivos y detalles de la entidad.
 
             Desarrollada de forma progresiva con responsive y mejoras en diseño para el uso interactivo de su uso informativo.`,
-        technologies: ['React.js', 'Next.js', 'Sass', 'Responsive Design', 'Styled Components'],
+        technologies: ['React.js', 'Next.js', 'Scss', 'Responsive Design'],
         image: veranoPage,
         alt: 'Interfaz pagina verano',
         links: {

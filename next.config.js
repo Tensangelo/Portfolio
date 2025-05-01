@@ -9,11 +9,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, '/src/styles')],
   },
   images: {
-    domains: [
-      'math.randomuser.me',
-      'upload.wikimedia.org',
-      'www.nacion.com',
-    ],
+    domains: [],
   },
   webpack: (config, options) => {
     config.module.rules.push({
