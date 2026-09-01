@@ -1,38 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "paths": {
-      "@images/*": [
-        "public/images/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@database/*": [
-        "src/database/*"
-      ],
-      "@context/*": [
-        "src/context/*"
-      ],
-      "@type/*": [
-        "src/types/*"
-      ]
+      "@images/*": ["./public/images/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@database/*": ["./src/database/*"],
+      "@context/*": ["./src/context/*"],
+      "@type/*": ["./src/types/*"]
     },
-    "typeRoots": [
-      "./src/types"
-    ],
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -40,10 +18,10 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -55,9 +33,11 @@
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
-, "src/app/Extras", "src/app/Developments", "src/app/Contact"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    ".next/types/**/*.ts",
+    "src/app/Extras",
+    "src/app/Developments",
+    "src/app/Contact",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
 }
